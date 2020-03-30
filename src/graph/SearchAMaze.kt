@@ -1,4 +1,7 @@
 package graph
+
+//The maze problem in leetcode. https://leetcode.com/articles/the-maze/
+
 data class Coordinate(var x: Int, var y: Int)
 public enum class Color{WHITE, BLACK}
 
