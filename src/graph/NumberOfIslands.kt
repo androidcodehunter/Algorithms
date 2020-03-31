@@ -34,6 +34,7 @@ fun numIslands(grid: Array<IntArray>): Int {
 }
 
 fun countIsland(grid: Array<IntArray>, row: Int, column: Int) {
+
     if (row < 0 || column < 0 || row >= grid.size || column >= grid[row].size)
         return
 
