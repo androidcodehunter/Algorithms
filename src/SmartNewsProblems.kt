@@ -7,7 +7,7 @@ fun main(args: Array<String>) {
     println(smartNewsSolutionTwo(intArrayOf(4,4)))
 }
 
-
+//solution may be here https://adaguo.wordpress.com/2013/08/19/compute-adjacent-pair/
 fun smartNewsSolutionOne(A: IntArray): Int {
     // write your code in Kotlin
 
@@ -34,10 +34,10 @@ fun smartNewsSolutionOne(A: IntArray): Int {
 
             val count = indexCount[next]?:1
 
-            if (count > 1){
-                diff = (set[list[i + 1].second] ?: 0) - list[i].second
+            diff = if (count > 1){
+                (set[list[i + 1].first] ?: 0) - list[i].second
             }else{
-                diff = list[i + 1].second - list[i].second
+                list[i + 1].second - list[i].second
             }
             return Math.abs(diff)
         }
