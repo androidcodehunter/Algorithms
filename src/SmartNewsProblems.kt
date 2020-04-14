@@ -1,11 +1,36 @@
+import java.util.*
+
 fun main(args: Array<String>) {
-    println(smartNewsSolutionOne(intArrayOf(1,4,7,3,3,5)))
-    println(smartNewsSolutionOne(intArrayOf(0,3,3,7,5,3,11,1)))
-    println(smartNewsSolutionTwo(intArrayOf(4,2,2,4,2)))
-    println(smartNewsSolutionTwo(intArrayOf(1,2,3,2)))
-    println(smartNewsSolutionTwo(intArrayOf(0,5,4,4,5,12)))
-    println(smartNewsSolutionTwo(intArrayOf(4,4)))
+    println(lengthOfLongestSubstring("abcabcbb"))
+    println(lengthOfLongestSubstring("bbbbb"))
+    println(lengthOfLongestSubstring("pwwkew"))
+    println(lengthOfLongestSubstring("aab"))
+    println(lengthOfLongestSubstring(" "))
+    println(lengthOfLongestSubstring("dvdf"))
+    
 }
+
+fun lengthOfLongestSubstring(s: String): Int {
+    val set = mutableSetOf<Char>()
+    var count = 0
+    s.forEach{
+        if(set.contains(it)){
+            val len = set.joinToString("").length
+            if (len > count) count = len
+            set.remove(it)
+            set.add(it)
+        }else{
+            set.add(it)
+            val len = set.joinToString("").length
+            if (len > count){
+                count = len
+            }
+        }
+    }
+
+    return count
+}
+
 
 //solution may be here https://adaguo.wordpress.com/2013/08/19/compute-adjacent-pair/
 fun smartNewsSolutionOne(A: IntArray): Int {

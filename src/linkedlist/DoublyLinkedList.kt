@@ -1,5 +1,0 @@
-package linkedlist
-
-class DoublyLinkedList {
-
-}
