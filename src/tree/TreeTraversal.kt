@@ -14,10 +14,14 @@ fun main(args: Array<String>) {
 
     root.right?.right = TreeNode(2)
 
-    preorderTraversal(root)
+    preorderIterativeTraversal(root)
+    //inorderIterativeTraversal(root)
+    //postorderIterativeTraversal(root)
 }
 
-fun preorderTraversal(root: TreeNode){
+
+
+fun preorderIterativeTraversal(root: TreeNode){
 
     val stack = Stack<TreeNode>()
     stack.push(root)
@@ -36,7 +40,10 @@ fun preorderTraversal(root: TreeNode){
 
 }
 
-fun inorderTraversal(root: TreeNode){
+fun preorderRecursiveTraversal(root: TreeNode){}
+
+
+fun inorderIterativeTraversal(root: TreeNode){
 
     val stack = Stack<TreeNode>()
     stack.push(root)
@@ -46,3 +53,11 @@ fun inorderTraversal(root: TreeNode){
     }
 
 }
+
+fun inorderRecursiveTraversal(root: TreeNode){}
+
+fun postorderIterativeTraversal(root: TreeNode){
+
+}
+
+fun postorderRecursiveTraversal(root: TreeNode){}

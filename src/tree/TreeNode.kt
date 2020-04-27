@@ -1,6 +1,6 @@
 package tree
 
 class TreeNode(var data: Int) {
-    var left: TreeNode? = null
-    var right: TreeNode? = null
+    val left: TreeNode? = null
+    val right: TreeNode? = null
 }

@@ -3,7 +3,7 @@ package tree
 
 /*
 
-Vivekanand Khyade - Algorithm Every Day He explained tress very well with recursion calculation. 
+Vivekanand Khyade - Algorithm Every Day He explained tress very well with recursion calculation.
 
 These below two tutorial is very important, you should have to fix everything to know better.*/
 
